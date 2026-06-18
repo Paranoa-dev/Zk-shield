@@ -1,0 +1,50 @@
+{
+  "name": "zk-shield",
+  "version": "0.1.0",
+  "description": "Private payments on Stellar using zero-knowledge proofs",
+  "homepage": "https://github.com/zk-shield/zk-shield#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zk-shield/zk-shield.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zk-shield/zk-shield/issues"
+  },
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev":              "next dev",
+    "build":            "next build",
+    "start":            "next start",
+    "lint":             "next lint",
+    "compile:circuit":  "circom circuits/commitment.circom --r1cs --wasm --sym -o circuits/build",
+    "setup:trusted":    "node scripts/trusted_setup.js",
+    "test:proof":       "node scripts/test_proof.js",
+    "gen:zeros":        "node scripts/gen_zeros.js",
+    "export:vkey":      "node scripts/export_vkey.js",
+    "deploy:contract":  "node scripts/deploy.js"
+  },
+  "dependencies": {
+    "@stellar/stellar-sdk":    "^12.3.0",
+    "@stellar/freighter-api":  "^2.0.0",
+    "snarkjs":                 "^0.7.4",
+    "circomlibjs":             "^0.1.7",
+    "ffjavascript":            "^0.3.0",
+    "clsx":                    "^2.1.1",
+    "tailwind-merge":          "^2.5.4"
+  },
+  "devDependencies": {
+    "next":               "^14.2.29",
+    "react":              "^18.3.1",
+    "react-dom":          "^18.3.1",
+    "typescript":         "^5.6.3",
+    "@types/node":        "^22.7.7",
+    "@types/react":       "^18.3.12",
+    "@types/react-dom":   "^18.3.1",
+    "tailwindcss":        "^3.4.14",
+    "postcss":            "^8.4.47",
+    "autoprefixer":       "^10.4.20",
+    "eslint":             "^8.57.1",
+    "eslint-config-next": "^14.2.29"
+  }
+}

@@ -1,0 +1,37 @@
+# Dependencies
+node_modules/
+
+# Next.js
+.next/
+out/
+
+# Environment
+.env.local
+.env*.local
+
+# Stellar keys — NEVER commit these
+*.secret
+*.key.json
+identity.json
+
+# ZK circuit artifacts (large binary files)
+circuits/build/
+public/circuits/*.wasm
+public/circuits/*.zkey
+# Keep verification_key.json (small, needed for local tests)
+!public/circuits/verification_key.json
+
+# Powers of Tau ceremony files (very large)
+*.ptau
+
+# Rust / Soroban
+contracts/target/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/settings.json
+.idea/
+*.swp

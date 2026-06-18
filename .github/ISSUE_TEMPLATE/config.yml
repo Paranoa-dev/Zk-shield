@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Drips Network Wave Program
+    url: https://www.drips.network/wave/stellar/repos
+    about: Fund contributors and get your work rewarded on-chain
+  - name: Stellar Developer Discord
+    url: https://discord.gg/stellardev
+    about: Ask questions in the Stellar developer community

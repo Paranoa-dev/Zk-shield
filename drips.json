@@ -1,0 +1,10 @@
+{
+  "$schema": "https://drips.network/schema/drips.json",
+  "name": "ZK Shield",
+  "description": "Private payment protocol on Stellar using zero-knowledge proofs. Deposit, transfer, and withdraw XLM without revealing amounts or addresses.",
+  "ecosystem": "stellar",
+  "type": "repo",
+  "website": "https://github.com/zk-shield/zk-shield",
+  "repository": "https://github.com/zk-shield/zk-shield",
+  "tags": ["zero-knowledge", "privacy", "stellar", "soroban", "circom", "groth16", "defi"]
+}

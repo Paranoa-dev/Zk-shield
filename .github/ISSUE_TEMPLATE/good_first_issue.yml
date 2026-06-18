@@ -1,0 +1,54 @@
+name: Good first issue
+description: A well-scoped task suitable for new contributors
+labels: [good first issue]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template to post a well-scoped task for new contributors.
+        Good first issues should be self-contained and completable in a few hours.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: One-sentence description of the task.
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Background / context
+      description: Why this matters and any relevant code pointers.
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: What "done" looks like. Use a checklist.
+      placeholder: |
+        - [ ] Unit test passes
+        - [ ] No TypeScript errors
+        - [ ] PR description explains the change
+    validations:
+      required: true
+
+  - type: dropdown
+    id: difficulty
+    attributes:
+      label: Difficulty
+      options:
+        - Easy (< 1 hour)
+        - Medium (1–4 hours)
+        - Hard (4+ hours)
+    validations:
+      required: true
+
+  - type: input
+    id: files
+    attributes:
+      label: Relevant files
+      placeholder: e.g. lib/zk/proof.ts, components/ui/Navbar.tsx
