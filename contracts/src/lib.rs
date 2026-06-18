@@ -255,7 +255,7 @@ impl ZkShield {
         let hash_bytes = env.crypto().sha256(&combined); // fallback for compilation
         // TODO: replace sha256 with env.crypto().poseidon_hash(&combined)
         // once soroban-sdk v21 is stabilised in your toolchain.
-        hash_bytes
+        hash_bytes.into()
     }
 
     // ── Internal: Groth16 verification ───────────────────────────────────────

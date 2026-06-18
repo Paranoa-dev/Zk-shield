@@ -204,7 +204,7 @@ export default function DepositPage() {
             <div className="bg-amber-50 border border-amber-200 rounded-xl p-4">
               <div className="font-medium text-amber-800 mb-2">⚠️ Back up your note</div>
               <p className="text-xs text-amber-700 mb-3 leading-relaxed">
-                This secret lets you spend your deposit. It's stored in your browser — back it up somewhere safe.
+                This secret lets you spend your deposit. It&apos;s stored in your browser — back it up somewhere safe.
               </p>
               <div className="font-mono text-xs bg-white rounded-lg p-3 break-all text-shield-dark">
                 {JSON.stringify({ id: savedNote.id, secret: savedNote.secret, nullifier: savedNote.nullifier, amount: savedNote.amount, leafIndex: savedNote.leafIndex }, null, 2)}

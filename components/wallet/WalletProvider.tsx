@@ -79,7 +79,7 @@ export function WalletProvider({ children }: { children: ReactNode }) {
       if (!isAllowed) {
         await f.setAllowed()
       }
-      const { publicKey: key } = await f.getPublicKey()
+      const key = await f.getPublicKey()
       const { networkPassphrase } = await f.getNetworkDetails()
 
       setPublicKey(key)
@@ -108,10 +108,7 @@ export function WalletProvider({ children }: { children: ReactNode }) {
       if (!f) throw new Error('Freighter not available')
       if (!network) throw new Error('Network not set')
 
-      const { signedTransaction } = await f.signTransaction(xdr, {
-        networkPassphrase: network,
-      })
-      return signedTransaction
+      return f.signTransaction(xdr, { networkPassphrase: network })
     },
     [network]
   )

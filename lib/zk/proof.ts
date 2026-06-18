@@ -72,6 +72,7 @@ export async function createCommitment(amountXlm: number): Promise<Commitment> {
 // ─── ZK Proof ─────────────────────────────────────────────────────────────────
 
 export interface ProofInputs {
+  [key: string]: unknown
   /** The secret (private) */
   secret: string
   /** The amount in stroops (private) */
