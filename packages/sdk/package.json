@@ -1,0 +1,24 @@
+{
+  "name": "@zk-shield/sdk",
+  "version": "0.1.0",
+  "description": "ZK Shield JavaScript SDK — interact with the ZK Shield Soroban contract",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Paranoa-dev/Zk-shield.git",
+    "directory": "packages/sdk"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@stellar/stellar-sdk": "^12.3.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3"
+  },
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit"
+  }
+}
