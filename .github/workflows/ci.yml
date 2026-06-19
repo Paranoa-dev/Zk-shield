@@ -24,7 +24,7 @@ jobs:
         run: npm run lint
 
       - name: Type-check
-        run: npx tsc --noEmit
+        run: node_modules/.bin/tsc --noEmit
 
       - name: Build
         run: npm run build
@@ -47,7 +47,8 @@ jobs:
             ~/.cargo/registry
             ~/.cargo/git
             contracts/target
-          key: cargo-${{ hashFiles('contracts/Cargo.lock') }}
+          key: cargo-${{ hashFiles('Cargo.lock') }}
+          restore-keys: cargo-
 
       - name: Test
         run: cargo test --features testutils
