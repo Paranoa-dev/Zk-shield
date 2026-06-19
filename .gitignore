@@ -26,6 +26,7 @@ public/circuits/*.zkey
 
 # Rust / Soroban
 contracts/target/
+target/
 
 # OS
 .DS_Store
