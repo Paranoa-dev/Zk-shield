@@ -74,7 +74,7 @@ export class ZkShieldClient {
       limit: 10_000,
     })
 
-    return (result.events ?? []).flatMap((e) => {
+    return (result.events ?? []).flatMap((e: DepositEvent): { commitment: string; leafIndex: number; ledger: string; txHash?: string } => {
       try {
         const vals = (e.value as xdr.ScVal).vec() ?? []
         const [commitment, leafIndex] = vals.map(scValToNative)

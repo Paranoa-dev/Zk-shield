@@ -1,8 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Tell Next.js the app/ directory lives inside frontend/
-  distDir: '.next',
   webpack: (config, { isServer }) => {
+    // snarkjs needs these Node.js built-ins available in browser bundles
     if (!isServer) {
       config.resolve.fallback = {
         ...config.resolve.fallback,
@@ -12,9 +11,11 @@ const nextConfig = {
         stream: false,
       }
     }
+    // Allow WASM files (circom witness generator)
     config.experiments = { ...config.experiments, asyncWebAssembly: true }
     return config
   },
+  // Allow the snarkjs WASM file to be served
   async headers() {
     return [
       {

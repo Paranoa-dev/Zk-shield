@@ -15,9 +15,9 @@
     "incremental": true,
     "plugins": [{ "name": "next" }],
     "paths": {
-      "@/*": ["./frontend/*"]
+      "@/*": ["./*"]
     }
   },
-  "include": ["frontend/next-env.d.ts", "frontend/**/*.ts", "frontend/**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
 }
